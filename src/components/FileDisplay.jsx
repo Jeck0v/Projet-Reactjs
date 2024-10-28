@@ -45,7 +45,7 @@ function FileDisplay(){
   function HomePage(){
       return (
         <div className="home-page">
-          <h1>Éditeur Markdown</h1>
+          <h1>Editeur Markdown</h1>
           <FileDisplay />
         </div>
       );

@@ -89,6 +89,8 @@
   
   .markdown-input, .markdown-preview {
     flex: 1;
+    min-height: 600px;
+    min-width: 400px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
