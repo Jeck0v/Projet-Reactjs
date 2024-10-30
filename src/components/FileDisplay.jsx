@@ -2,18 +2,19 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function FileDisplay(){
-  const navigate = useNavigate();
+  const navigate = useNavigate(); //Hook de react Router
   const files = Object.keys(localStorage).filter(key=> key !== 'markdownFiles' && key !== 'scribe_extension_state' && localStorage.getItem(key));
 
   function handleSelectFile(fileId){
     if (fileId){
       navigate(`/editor?id=${fileId}`);
-    }
+    } // si on a l'id du fichier alors on envoie l'user sur l'editor avec le fichier
     else {
-      navigate('/editor');
+      navigate('/editor'); // sinon on renvoie juste vers l'editor
     }
   };
 
+  // Affichage des fichiers créer
    function renderFileList(){
     if (files.length > 0){
       return files.map((file) => (
@@ -30,6 +31,7 @@ function FileDisplay(){
     }
   };
 
+   // Affichage liste fichier et navigation fichier vierge
   return(
     <div className="file-display">
       <h3>Fichiers Markdown Disponibles</h3>

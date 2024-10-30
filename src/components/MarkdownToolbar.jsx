@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 function MarkdownToolbar({ markdown, setMarkdown, onSave, onExport }){
   const fileInputRef = useRef(null);
   
-  // On aurais pu le faire avec un switch case
+  // Rajouter pour copy dans le clipboard
   const shortcuts = {
     title: '\n# Titre \nDescription complète\n',
     list: '\n- Element 1 \n- Element 2 \n- Element 3\n',
