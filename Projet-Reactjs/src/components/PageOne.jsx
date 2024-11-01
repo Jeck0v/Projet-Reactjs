@@ -12,7 +12,6 @@ function PageOne() {
     fetch('https://api.adviceslip.com/advice')
       .then(response => response.json())
       .then(data => setCitation(data.slip.advice));
-
     // Fetch de la blague du jour
     fetch('https://official-joke-api.appspot.com/random_joke')
       .then(response => response.json()) 
@@ -21,7 +20,8 @@ function PageOne() {
 
   return (
     <div>
-      <p>Date et heure : {new Date().toLocaleString() } </p>
+      {/* Date du jour de stack overflow : https://stackoverflow.com/questions/50568107/how-to-display-date-in-react-js-using-state */}
+      <p>Date et heure : {new Date().toLocaleString() } </p> 
       <p>Citation du jour : {citation}</p>
       <p>Blague du jour : {blague}</p>
       <h2>Liste des fichiers Markdown</h2>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import PageOne from "./components/PageOne"
 import Layout from "./components/Layout"
 
 
