@@ -2,15 +2,14 @@ import React, { useRef } from 'react';
 
 function MarkdownToolbar({ markdown, setMarkdown, onSave, onExport, onCopy }){
   const fileInputRef = useRef(null);
-  
-  // Rajouter pour copy dans le clipboard
+
   const shortcuts = {
     title: '\n# Titre \nDescription complète\n',
     list: '\n- Element 1 \n- Element 2 \n- Element 3\n',
     link: '\n[Texte](url)\n',
     img: '\n![alt texte](url-img)\n',
     code: '\n```\nVotre code\n```\n'
-  };
+  }
 
   function handleShortcut(type){
     if (type === 'reset'){
@@ -19,7 +18,7 @@ function MarkdownToolbar({ markdown, setMarkdown, onSave, onExport, onCopy }){
     else {
       setMarkdown(markdown + shortcuts[type]);
     }
-  };
+  }
   // Générer par l'IA
   function handleImport(event){
     const file = event.target.files[0];
@@ -32,11 +31,11 @@ function MarkdownToolbar({ markdown, setMarkdown, onSave, onExport, onCopy }){
     }
     // autorise de réimporter un fichier
     event.target.value = '';
-  };
+  }
   // Fin de la génération par l'IA
   function triggerFileInput(){
     fileInputRef.current.click();
-  };
+  }
 
   return (
     // ToolBar pour rajouter les racourcis ect...

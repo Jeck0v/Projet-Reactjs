@@ -7,7 +7,7 @@ function MarkdownPreview({ markdown }){
       <h2>Prévisualisation</h2>
       <div className="markdown-preview" dangerouslySetInnerHTML={{ __html: marked(markdown) }}/>
     </div>
-  ); // dangerouslySetInnerHTML faille xss possible eut être rajouter de la sécurité
+  ); // dangerouslySetInnerHTML faire attention à l'utilisation
 }
 
 export default MarkdownPreview;

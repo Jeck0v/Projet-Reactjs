@@ -2,7 +2,7 @@ import React from 'react';
 import MarkdownToolbar from './MarkdownToolbar';
 import MarkdownPreview from './MarkdownPreview';
 
-// Rajouter une validation ? pour le titre genre ?
+
 function MarkdownEditor({ markdown, setMarkdown, title, setTitle, onSave, onExport, onCopy }) 
 {
   return (

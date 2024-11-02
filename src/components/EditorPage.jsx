@@ -29,7 +29,8 @@ function EditorPage(){
     else {
       console.log('Aucun fichier');
     }
-  };
+
+  }
 
   // générer par l'ia 
   function handleExport(){
@@ -40,18 +41,19 @@ function EditorPage(){
     a.download = `${title || 'Nouveau Fichier'}.md`;
     a.click();
     URL.revokeObjectURL(url);
-  };
+  }
   // fin de la génération
 
+  // on récup les erreurs, et on affiche quelque chose pour prévenir que le texte est bien copié
   function handleCopy() {
     navigator.clipboard.writeText(markdown)
         .then(() => {
-            console.log('Texte copié!');
+            alert('Texte copié!');
         })
         .catch(err => {
             console.error('Erreur lors de la copie : ', err);
         });
-  };
+  }
 
   return (
     <div className="editor-page">
