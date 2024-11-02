@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-function MarkdownToolbar({ markdown, setMarkdown, onSave, onExport }){
+function MarkdownToolbar({ markdown, setMarkdown, onSave, onExport, onCopy }){
   const fileInputRef = useRef(null);
   
   // Rajouter pour copy dans le clipboard
@@ -41,6 +41,7 @@ function MarkdownToolbar({ markdown, setMarkdown, onSave, onExport }){
   return (
     // ToolBar pour rajouter les racourcis ect...
     <div className="toolbar">
+      <h2>Barre d'outils</h2>
       <input type="file" ref={fileInputRef} onChange={handleImport} accept=".md" style={{ display: 'none' }}/>
       <button onClick={()=> handleShortcut('title')}>Titre</button>
       <button onClick={()=> handleShortcut('list')}>Liste</button>
@@ -48,6 +49,7 @@ function MarkdownToolbar({ markdown, setMarkdown, onSave, onExport }){
       <button onClick={()=> handleShortcut('img')}>Image</button>
       <button onClick={()=> handleShortcut('code')}>Code</button>
       <button onClick={()=> handleShortcut('reset')}>Réinitialiser</button>
+      <button onClick={onCopy}>Copier</button>
       <button onClick={onSave}>Enregistrer</button>
       <button onClick={onExport}>Exporter</button>
       <button onClick={triggerFileInput}>Importer</button>
