@@ -81,12 +81,16 @@ button:hover {
   border: 2px solid var(--border);
   padding: 10px;
   margin: 6% 0 5%;
+  overflow:auto;
 }
 
 .editor-input-section{
   grid-area: 2 / 1 / 3 / 2;
   border: 2px solid var(--couleur);
   background: #ffff66;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 
@@ -97,6 +101,7 @@ button:hover {
   display:flex;
   flex-direction: column;
   align-items: center;
+  overflow-wrap: break-word;
 }
 
 
@@ -146,4 +151,24 @@ button:hover {
   background: var(--couleur);
   border: 2px solid var(--border);
   margin:5px;
+}
+
+@media (max-width: 1150px) {
+  
+  .editor-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .markdown-input{
+    width:50%;
+  }
+  .markdown-preview{
+    width:50%;
+  }
+
+  .title-input{
+    width:4rem;
+  }
 }
