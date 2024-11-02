@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import FileDisplay from "../Markdown/FileDisplay.jsx";
+import DateTimeDisplay from "../PageOne/DateTime.jsx";
 
 function PageOne() {
   const [citation, setCitation] = useState('');
@@ -18,8 +19,8 @@ function PageOne() {
 
   return (
       <div>
-          {/* Date du jour de stack overflow : https://stackoverflow.com/questions/50568107/how-to-display-date-in-react-js-using-state */}
-          <p>Date et heure : {new Date().toLocaleString()} </p>
+          {/* Date et heure voir dans DateTime.jsx */}
+          <p>Date et heure : <DateTimeDisplay/> </p>
           <p>Citation du jour : {citation}</p>
           <p>Blague du jour : {blague}</p>
           <p>Recette du jour : </p>

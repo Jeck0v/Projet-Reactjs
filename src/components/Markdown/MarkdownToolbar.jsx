@@ -4,11 +4,11 @@ function MarkdownToolbar({ markdown, setMarkdown, onSave, onExport, onCopy }){
   const fileInputRef = useRef(null);
 
   const shortcuts = {
-    title: '\n# Titre \nDescription complète\n',
+    title: '\n # <p align="center">Titre</p>\n Description complète\n', // ajustement pour que le titre du raccourci soit au centre
     list: '\n- Element 1 \n- Element 2 \n- Element 3\n',
     link: '\n[Texte](url)\n',
     img: '\n![alt texte](url-img)\n',
-    code: '\n```\nVotre code\n```\n'
+    code: '\n```\nVotre code\n```\n' // j'essaye de voir pour que l'on puisse add les couleurs du code ect...
   }
 
   function handleShortcut(type){
