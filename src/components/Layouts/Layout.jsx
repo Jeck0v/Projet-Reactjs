@@ -22,7 +22,7 @@ function Layout() {
           <Link to="#">Démos</Link>
           <Link to="#">Voir</Link>
           <Link to="#">Forums</Link>
-          <Link to="#">Les Meilleur</Link>
+          <Link to="#">Les Meilleurs</Link>
           <Link to="#">Autres éditeur</Link>
           {/* Autres liens */}
         </aside>
