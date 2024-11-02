@@ -5,13 +5,11 @@ import FileDisplay from "../Markdown/FileDisplay.jsx";
 function PageOne() {
   const [citation, setCitation] = useState('');
   const [blague, setBlague] = useState('');
-
-  useEffect(() => {
+ useEffect(() => {
     // Fetch de la citation du jour
     fetch('https://api.adviceslip.com/advice')
       .then(response => response.json())
       .then(data => setCitation(data.slip.advice));
-
     // Fetch de la blague du jour
     fetch('https://official-joke-api.appspot.com/random_joke')
       .then(response => response.json())
@@ -20,14 +18,17 @@ function PageOne() {
 
   return (
       <div>
+          {/* Date du jour de stack overflow : https://stackoverflow.com/questions/50568107/how-to-display-date-in-react-js-using-state */}
           <p>Date et heure : {new Date().toLocaleString()} </p>
           <p>Citation du jour : {citation}</p>
           <p>Blague du jour : {blague}</p>
-          <p> Recette du jour: </p>
-          <p> Recette de Mocktail du jour: </p>
-           <div className="home-page">
-                <FileDisplay />
-           </div>
+          <p>Recette du jour : </p>
+          <p>Cocktail du jour: </p>
+          <p>Evenement du jour: </p>
+          <h2>Liste des fichiers Markdown</h2>
+          <div className="home-page">
+              <FileDisplay/>
+          </div>
       </div>
   );
 }

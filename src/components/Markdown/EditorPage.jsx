@@ -40,12 +40,21 @@ function EditorPage() {
     URL.revokeObjectURL(url);
   }
 
+  function handleCopy() {
+    navigator.clipboard.writeText(markdown)
+        .then(() => {
+            alert('Texte copié !');
+        })
+        .catch(err => {
+            console.error('Erreur lors de la copie : ', err);
+        });
+  }
   return (
     <div className="editor-page">
       <div className="editor-header">
         <Link to="/" className="back-button">Retour</Link>
       </div>
-      <MarkdownEditor markdown={markdown} setMarkdown={setMarkdown} title={title} setTitle={setTitle} onSave={handleSave} onExport={handleExport}/>
+      <MarkdownEditor markdown={markdown} setMarkdown={setMarkdown} title={title} setTitle={setTitle} onSave={handleSave} onExport={handleExport} onCopy={handleCopy}/>
     </div>
   );
 }

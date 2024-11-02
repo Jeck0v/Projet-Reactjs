@@ -1,9 +1,8 @@
 import React, { useRef } from 'react';
 
-function MarkdownToolbar({ markdown, setMarkdown, onSave, onExport }){
+function MarkdownToolbar({ markdown, setMarkdown, onSave, onExport, onCopy }){
   const fileInputRef = useRef(null);
 
-  // Rajouter pour copy dans le clipboard
   const shortcuts = {
     title: '\n# Titre \nDescription complète\n',
     list: '\n- Element 1 \n- Element 2 \n- Element 3\n',
@@ -40,18 +39,19 @@ function MarkdownToolbar({ markdown, setMarkdown, onSave, onExport }){
 
   return (
     // ToolBar pour rajouter les racourcis ect...
-    <div className="toolbar">
-      <input type="file" ref={fileInputRef} onChange={handleImport} accept=".md" style={{ display: 'none' }}/>
-      <button onClick={()=> handleShortcut('title')}>Titre</button>
-      <button onClick={()=> handleShortcut('list')}>Liste</button>
-      <button onClick={()=> handleShortcut('link')}>Lien</button>
-      <button onClick={()=> handleShortcut('img')}>Image</button>
-      <button onClick={()=> handleShortcut('code')}>Code</button>
-      <button onClick={()=> handleShortcut('reset')}>Réinitialiser</button>
-      <button onClick={onSave}>Enregistrer</button>
-      <button onClick={onExport}>Exporter</button>
-      <button onClick={triggerFileInput}>Importer</button>
-    </div>
+      <div className="toolbar">
+          <input type="file" ref={fileInputRef} onChange={handleImport} accept=".md" style={{display: 'none'}}/>
+          <button onClick={() => handleShortcut('title')}>Titre</button>
+          <button onClick={() => handleShortcut('list')}>Liste</button>
+          <button onClick={() => handleShortcut('link')}>Lien</button>
+          <button onClick={() => handleShortcut('img')}>Image</button>
+          <button onClick={() => handleShortcut('code')}>Code</button>
+          <button onClick={() => handleShortcut('reset')}>Réinitialiser</button>
+          <button onClick={onCopy}>Copier</button>
+          <button onClick={onSave}>Enregistrer</button>
+          <button onClick={onExport}>Exporter</button>
+          <button onClick={triggerFileInput}>Importer</button>
+      </div>
   );
 }
 

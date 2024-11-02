@@ -34,7 +34,6 @@ function FileDisplay(){
    // Affichage liste fichier et navigation fichier vierge
   return(
     <div className="file-display">
-      <h3>Fichiers Markdown Disponibles</h3>
       <ul className="file-list">
         {renderFileList()}
       </ul>
