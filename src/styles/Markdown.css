@@ -34,6 +34,7 @@ body {
     resize:none;
     padding: 10px;
     border: 2px solid var(--border);
+    margin-bottom:4%;
 }
 
 .editor-container{
@@ -76,7 +77,7 @@ button:hover {
 .markdown-preview{
   border: 2px solid var(--couleur);
   background: var(--couleur);
-  height:405px;
+  height:400px;
   width:400px;
   border: 2px solid var(--border);
   padding: 10px;
