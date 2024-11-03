@@ -1,11 +1,12 @@
 
-# <p align="center">Merge Reactjs Projects</p>
+# <p align="center">Group 4 ReactJs project</p>
  
 ## 🧐 Objectif: 
 The aim was to redesign the site in the style of the 2000s. In Full Front-end, and in ReactJs. The site had to include:
 - API display
 - Date and time display
 - A Markdown editor
+
 
 ## 🛠️ Tech Stack
 - [React](https://reactjs.org/)
@@ -28,6 +29,13 @@ Creation of additional functionality:
 - Save the file
 - Import or export an .md file
 - File preview
+<hr>
+
+### Project members:
+- Jean-Maxime DJANETT
+- Christ-Yvann Akora EHOURA Wuia
+- Kelly GONÇALVES GAMA 
+- Arnaud Fischer
 
 <hr>
 
@@ -38,4 +46,4 @@ npm i
 ```bash
 npm run dev
 ```
-Go to http://localhost:5173/ and now you can test it.
+Go to your localhost and now you can test it.
