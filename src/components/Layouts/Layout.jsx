@@ -15,7 +15,7 @@ function Layout() {
         <aside className="Lateral">
           <h3>Navigation</h3>
           <Link to="/">Accueil</Link>
-          <Link to="/editor">Créer un fichier</Link> {/* Lien vers l'éditeur */}
+          <Link to="/editor">Editeur Markdown</Link> {/* Lien vers l'éditeur */}
           <Link to="#">Voyager</Link>
           <Link to="#">Ecrire</Link>
           <Link to="#">Astuces</Link>
