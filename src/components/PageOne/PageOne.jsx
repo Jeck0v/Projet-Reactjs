@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import FileDisplay from "../Markdown/FileDisplay.jsx";
 import DateTimeDisplay from "../PageOne/DateTime.jsx";
+import ThemeChanger from '../Layouts/ThemeChanger.jsx';
 
 function PageOne() {
   const [citation, setCitation] = useState('');
@@ -47,6 +48,7 @@ function PageOne() {
 
   return (
       <div>
+          <ThemeChanger/>
           {/* Date et heure voir dans DateTime.jsx */}
           <h4>Date et heure: <DateTimeDisplay/></h4>
           <h4>Citation du jour: {citation}</h4>

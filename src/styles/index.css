@@ -2,6 +2,29 @@
     --couleur: #ffcc00; /* Couleur principale pour le fond et les boutons */
     --bg: #fffacd; /* Couleur de fond */
     --border: #666600; /* Couleur de bordure */
+    --border2: #ffcc00;
+    --header: #ffcc00;
+    --lateral: #ffff66;
+    --fonts: #333;
+    --lateralbutton: #ffcc00;
+    --button:black;
+    --decoration: none;
+    --title: black;
+}
+
+[data-theme = "galaxy"] { /* Variables pour le 2eme thème */
+ --bg: url(../images/stars.jpg);
+ --bg2: url(../images/galaxy.jpg);
+ --header: rgba(255, 255, 255, 0);
+ --lateral: rgba(255, 255, 255, 0);
+ --border: grey;
+ --border2: grey;
+ --fonts: white;
+ --lateralbutton: grey;
+ --couleur:grey;
+ --button:red;
+ --decoration: underline;
+ --title: red;
 }
 
 body {
@@ -14,14 +37,16 @@ body {
     max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
-    background: #ffffff;
+    background: var(--bg2);
+    background-repeat: no-repeat;
+    background-size: cover;
     border: 2px solid var(--border);
     box-shadow: 5px 5px 0 var(--border);
 }
 
 .header {
-    background: var(--couleur);
-    color: black;
+    background: var(--header);
+    color: var(--title);
     padding: 10px;
     text-align: center;
     border: 2px solid var(--border);
@@ -29,6 +54,7 @@ body {
     font-size: 24px;
     font-weight: bold;
 }
+
 
 .PageOne-nav {
     background: #ffcc00;
@@ -71,32 +97,38 @@ body {
 }
 
 .Lateral {
-    background: #ffff66;
+    background: var(--lateral);
     padding: 10px;
-    border: 2px solid #ffcc00;
+    border: 2px solid var(--border2);
     width: 200px;
     text-align: center;
     font-size: 14px;
 }
 .Lateral h3 {
     margin-top: 0;
-    color: black;
     font-weight: bold;
 }
 .Lateral a {
     color: black;
-    text-decoration: none;
+    text-decoration:none;
     display: block;
     padding: 5px;
     margin: 5px 0;
-    border: 2px solid #ffcc00;
-    background: #ffcc00;
+    border: 2px solid var(--border2);
+    background: var(--lateralbutton)
 }
 
 .Lateral a:hover {
-    background: #ffff66;
+    background: var(--lateral);
 }
 
+.galaxybutton{
+    margin: 10px 0 10px 85%;
+    color:red;
+    text-decoration: underline;
+    background-image: url(../images/galaxy.jpg);
+    background-size:cover;
+}
 /* responsive */
 
 @media (max-width: 768px) {
